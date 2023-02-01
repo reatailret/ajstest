@@ -1,1 +1,18 @@
-Sidebar
+<div class="filters">
+  Selected: {{selectedItem().title}} Tags:
+
+  <table class="table-items">
+    <tr ng-repeat="(index,item) in selectedItem().tags track by index">
+      <td>
+        {{item}}
+        <button ng-click="delTag(item,index)">x</button>
+      </td>
+    </tr>
+  </table>
+  <div>
+    <form ng-submit="addTag()">
+      <input type="text" ng-model="newTag" />
+      <button type="submit">Add tag</button>
+    </form>
+  </div>
+</div>

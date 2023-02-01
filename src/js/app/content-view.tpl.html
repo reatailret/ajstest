@@ -1,2 +1,32 @@
 <some-1></some-1>
-Content
+<div class="filters">
+  <div>
+    Order by:
+    <select ng-model="orderField">
+      <option value="title" selected>Title</option>
+      <option value="date">Date</option>
+    </select>
+  </div>
+  <div>
+    Show date
+    <input type="checkbox" ng-model="showDateFlag" />
+  </div>
+  <div>
+    Search:
+    <input type="search" ng-model="q" placeholder="search..." aria-label="filter" />
+  </div>
+</div>
+<table class="table-items">
+  <tr ng-click="setCurrentItem(item)" ng-repeat="item in items | orderBy:orderField:false:orderComparator | filter:q as results track by item.id" ng-class="{selected: selectedItem() === item}">
+    <td>
+      <div>Title: {{item.title}}</div>
+      <div ng-if="showDateFlag">Date: {{item.date | date:'dd.MM.yyyy HH:mm'}}</div>
+    </td>
+  </tr>
+</table>
+<div class="filters">
+  <form ng-submit="addTitle()">
+    <input type="text" ng-model="newTitle" />
+    <button type="submit">Add</button>
+  </form>
+</div>

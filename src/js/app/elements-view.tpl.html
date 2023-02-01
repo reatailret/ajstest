@@ -1,9 +1,16 @@
 <div class="elements-view__ctrls">
   <form ng-submit="setWidth()">
-    <label>Width: <input type="number" ng-model="model.width" min="100" max="600" step="1"></label>
+    <label>
+      Width:
+      <input type="number" ng-model="model.width" min="100" max="600" step="1" />
+    </label>
     <button type="submit">Set</button>
   </form>
 </div>
-<div>
-  Elements
+<div class="container">
+  <button class="custom">Button</button>
+  <div class="row">
+    <div class="items">Item 1 Item 1 Item 1 Item 1</div>
+    <div class="control"><span class="cube"></span></div>
+  </div>
 </div>

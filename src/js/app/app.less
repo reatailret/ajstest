@@ -26,3 +26,47 @@ some-2 {
 some-3 {
   display: block;
 }
+.container {
+  padding: 1rem;
+}
+button.custom {
+  border: 2px solid #222222;
+  border-radius: 5px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #222222;
+  width: 100%;
+  height: 40px;
+  background: #fff;
+}
+button.custom:hover {
+  border: 2px solid #AAAAAA;
+  background: #dddddd;
+}
+div.row {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 22px;
+  .items {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 1rem;
+  }
+
+  .control {
+    margin-left: auto;
+    .cube {
+      width: 20px;
+      height: 20px;
+      background: #AAAAAA;
+      display: block;
+    }
+  }
+}
